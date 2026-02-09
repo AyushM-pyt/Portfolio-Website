@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayush Mishra Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+
+<!-- Floating Objects -->
+<div class="floating-objects">
+  <img src="assets/ironman1.png" class="float astro" alt="astronaut">
+  <img src="assets/basketball_fire-removebg-preview.png" class="float planet" alt="planet">
+  <img src="assets/pythonp-removebg-preview.png" class="float rocket" alt="rocket">
+  <img src="assets/arcreactor-removebg.png" class="float sat" alt="satellite">
+  <img src="assets/spiderman.png" class="float ufo" alt="ufo">
+  <img src="assets/luffy.png" class="float comet" alt="comet">
+  <img src="assets/goku-removebg-preview.png" class="float earth" alt="earth">
+  <img src="assets/optimus1-removebg-preview.png" class="float moon" alt="moon">
+  <img src="assets/zoro.png" class="float jupiter" alt="jupiter">
+  <img src="assets/AM logo mini1.png" class="float asteroid" alt="asteroid">
+  <img src="assets/Lionel_Messi1.png" class="float thor" alt="thor">
+  <img src="assets/s1000rr.png" class="float bike" alt="bike">
+  <img src="assets/AI.png" class="float deadpool" alt="deadpool">
+  <img src="assets/strawhat_jollyroger.png" class="float jollyroger" alt="jollyroger">
+  <img src="assets/batman.png" class="float batman" alt="batman">
+
+</div>
+
+<style>
+  .floating-objects {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .floating-objects img {
+    position: absolute;
+    width: 95px; /* smaller default */
+    opacity: 0.85;
+  }
+
+  /* Positions + animations */
+  .astro    { top: 20%; left: 10%; animation: float1 8s ease-in-out infinite; }
+  .planet   { top: 40%; right: 15%; animation: float2 12s ease-in-out infinite; }
+  .rocket   { bottom: 25%; left: 40%; animation: float3 10s ease-in-out infinite; }
+  .sat      { top: 80%; left: 10%; animation: float4 9s ease-in-out infinite; }
+  .ufo      { top: 13%; right: 20%; animation: float5 14s ease-in-out infinite; }
+  .comet    { top: 60%; left: 20%; animation: float6 11s ease-in-out infinite; }
+  .earth    { bottom: 10%; right: 30%; animation: float7 13s ease-in-out infinite; }
+  .moon     { top: 70%; right: 10%; animation: float8 15s ease-in-out infinite; }
+  .jupiter  { bottom: 25%; left: 5%; animation: float9 16s ease-in-out infinite; }
+  .asteroid { top: 40%; left: 50%; animation: float10 12s ease-in-out infinite; }
+  .thor     { top: 15%; right: 5%; animation: float11 14s ease-in-out infinite; }
+  .bike   { bottom: 3%; left: 30%; animation: float12 12s ease-in-out infinite;width: 115px; }
+  .deadpool { top: 75%; right: 40%; animation: float13 16s ease-in-out infinite; }
+  .jollyroger  { top: 15%; left: 30%; animation: float14 13s ease-in-out infinite;width: 115px; }
+  .batman   { top: 10%; left: 60%; animation: float15 18s ease-in-out infinite; }
+
+  /* Floating animations */
+  @keyframes float1 { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-30px) rotate(5deg); } }
+  @keyframes float2 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-40px) rotate(-6deg); } }
+  @keyframes float3 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-25px) rotate(8deg); } }
+  @keyframes float4 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-35px) rotate(-4deg); } }
+  @keyframes float5 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-45px) rotate(6deg); } }
+  @keyframes float6 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-20px) rotate(-5deg); } }
+  @keyframes float7 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-30px) rotate(7deg); } }
+  @keyframes float8 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-50px) rotate(-3deg); } }
+  @keyframes float9 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-35px) rotate(10deg); } }
+  @keyframes float10 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-40px) rotate(-7deg); } }
+  @keyframes float11 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-30px) rotate(5deg); } }
+  @keyframes float12 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-40px) rotate(-6deg); } }
+  @keyframes float13 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-25px) rotate(8deg); } }
+  @keyframes float14 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-35px) rotate(-4deg); } }
+  @keyframes float15 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-50px) rotate(7deg); } }
+  
+  
+  /* Mobile adjustment: smaller floating images */
+  @media (max-width: 768px) {
+    .floating-objects img { width: 30px; opacity: 0.8; }
+  }
+</style>
+
+<!-- Navbar -->
+<nav class="bg-none shadow sticky top-0 z-50 bg-transparent">
+  <div class="container mx-auto flex justify-between items-center py-4 px-6">
+    <a href="#hero-title">
+      <img src="assets\\AM.png" alt="Ayush Mishra Logo" id = "logo" class="h-full w-40 object-contain opacity-85" class="h-10 w-auto">
+    </a>
+    <!-- Desktop links -->
+    <div class=" md:flex space-x-4">
+      <a href="#education" class="hover:text-blue-600">Education</a>
+      <a href="#projects" class="hover:text-blue-600">Projects</a>
+      <a href="#contact" class="hover:text-blue-600">Contact</a>
+    </div>
+    <!-- Mobile hamburger -->
+    <button id="menu-btn" class="md:hidden text-3xl">☰</button>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden flex-col space-y-2 px-6 pb-4 bg-black/70 text-white md:hidden">
+    <a href="#education" class="hover:text-blue-400">Education</a>
+    <a href="#projects" class="hover:text-blue-400">Projects</a>
+    <a href="#contact" class="hover:text-blue-400">Contact</a>
+  </div>
+</nav>
+
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+
+
+<!-- Hero Section -->
+<section class="container mx-auto text-center h-screen flex flex-col justify-center px-6">
+  <h2 id="hero-title" class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Ayush Mishra</h2>
+  <p class="text-lg text-gray-400 mb-6">
+    <span id="typewriter"></span>
+  </p>
+</section>
+<!-- Motivational Quotes -->
+<section class="container mx-auto text-center py-12 px-6">
+  <div class="aurora-wrapper">
+    <div class="aurora aurora1"></div>
+    <div class="aurora aurora2"></div>
+    <div class="aurora aurora3"></div>
+
+    <blockquote id="motivational-quote" class="quote">
+      <p class="text-xl font-semibold">"The best way to predict the future is to invent it." – Alan Kay</p>
+    </blockquote>
+  </div>
+</section>
+
+
+<!-- My Description -->
+<section id="about" class="container mx-auto text-center py-50 px-6 md-12">
+  <h3 class="text-4xl font-bold mb-6">About Me</h3>
+
+  <p class="description">
+    <p class="max-w-4xl mx-auto text-lg">
+    I am an AI & ML Engineer with a strong passion for building intelligent systems, solving
+    real-world problems, and exploring futuristic technology.  
+    I love experimenting with new ideas, creating projects that combine innovation with practicality,
+    and constantly learning to grow as a developer.  
+    My journey so far has been about curiosity, persistence, and making technology work for humans —
+    and I’m just getting started 🚀.
+    </p>
+  </p>
+</section>
+
+<!-- Humorous Quote -->
+<section class="container mx-auto text-center py-12 px-6">
+    <p>Suggested Quote by my friend ZETA 🤖 </p><br>
+  <div class="aurora-wrapper">
+    <div class="aurora aurora1"></div>
+    <div class="aurora aurora2"></div>
+    <div class="aurora aurora3"></div>
+  <blockquote id="humorous-quote" class="quote quote-green">
+    <p class="text-xl font-semibold">“Life is too short to remove USB safely.” – Tech wisdom</p>
+  </blockquote>
+</section>
+
+
+  <!-- Education Section -->
+  <section id="education" class="container mx-auto py-20 px-6">
+    <h3 class="text-3xl font-semibold mb-8 text-center ">Education</h3>
+    <div id="education-cards" class="grid md:grid-cols-1 gap-8">
+      <!-- Cards will be populated by JS -->
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container mx-auto py-20 px-6">
+    <h3 class="text-3xl font-semibold mb-8 text-center">Projects</h3>
+    <div id="projects-cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Cards will be populated by JS -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container mx-auto py-20 px-6 text-center">
+    <h3 class="text-3xl font-semibold mb-8">Contact Me</h3>
+    <p>Email: <a href="mailto:iayushmishra25@mgmail.com" class="text-blue-600 hover:underline">iayushmishra25@gmail.com</a></p>
+    <p class="mt-4">
+      LinkedIn: <a href="#" class="text-blue-600 hover:underline">www.linkedin.com/in/ayush-mishra2510</a> | 
+      GitHub: <a href="#" class="text-blue-600 hover:underline">https://github.com/AyushM-pyt</a> | 
+      Instagram: <a href="#" class="text-blue-600 hover:underline">https://github.com/AyushM-pyt</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg- py-6 mt-12 text-center">
+    <p>© 2025 Ayush Mishra | <b>Connecting Skills, Creating Synergies</b></p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+<script>
+  const roles = [
+    "AI & ML Enthusiast",
+    "Python Developer",
+    "Explorer 🚀",
+    "Innovator"
+  ];
+
+  let roleIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typingSpeed = 120;
+  const deletingSpeed = 60;
+  const delayBetweenRoles = 1500;
+
+  function typeLoop() {
+    const typewriter = document.getElementById("typewriter");
+    const heroTitle = document.getElementById("hero-title");
+    const currentRole = roles[roleIndex];
+
+    if (!isDeleting && charIndex <= currentRole.length) {
+      typewriter.textContent = currentRole.substring(0, charIndex++);
+      setTimeout(typeLoop, typingSpeed);
+    } else if (isDeleting && charIndex >= 0) {
+      typewriter.textContent = currentRole.substring(0, charIndex--);
+      setTimeout(typeLoop, deletingSpeed);
+    } else {
+      if (!isDeleting) {
+        // Pause, then start deleting
+        isDeleting = true;
+        setTimeout(typeLoop, delayBetweenRoles);
+      } else {
+        // Finished deleting, move to next role
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        charIndex = 0;
+
+        // Trigger glitch animation on hero title
+        heroTitle.classList.add("glitch");
+        setTimeout(() => heroTitle.classList.remove("glitch"), 600);
+
+        setTimeout(typeLoop, typingSpeed);
+      }
+    }
+  }
+
+  // Start typing
+  typeLoop();
+</script>
+
+
+<script>
+  // Motivational Quotes
+  const motivationalQuotes = [
+    '"The best way to predict the future is to invent it." – Alan Kay',
+    '"Do not wait to strike till the iron is hot, but make it hot by striking." – W.B. Yeats',
+    '"Dream big. Start small. Act now." – Robin Sharma',
+    '"Success is not final, failure is not fatal: it is the courage to continue that counts." – Winston Churchill'
+  ];
+
+  // Humorous Quotes
+  const humorousQuotes = [
+    '“Life is too short to remove USB safely.” – Tech wisdom',
+    '“I’m not lazy, I’m just in energy-saving mode.” – Every AI ever',
+    '“Artificial Intelligence is no match for natural stupidity.” – Anonymous',
+    '“My software never has bugs. It just develops random features.”'
+  ];
+
+  let motivationalIndex = 0;
+  let humorousIndex = 0;
+
+  function rotateQuote(id, quotes, indexRef) {
+    const element = document.getElementById(id);
+
+    // Fade out
+    element.classList.add("hidden");
+
+    setTimeout(() => {
+      // Update text after fade-out
+      indexRef.value = (indexRef.value + 1) % quotes.length;
+      element.textContent = quotes[indexRef.value];
+
+      // Fade back in
+      element.classList.remove("hidden");
+    }, 1500); // matches CSS transition
+  }
+
+  // Keep track of indexes as objects (so reference updates work)
+  const motRef = { value: motivationalIndex };
+  const humRef = { value: humorousIndex };
+
+  // Change motivational quote every 10s
+  setInterval(() => rotateQuote("motivational-quote", motivationalQuotes, motRef), 10000);
+
+  // Change humorous quote every 12s
+  setInterval(() => rotateQuote("humorous-quote", humorousQuotes, humRef), 12000);
+</script>
+
+
+</body>
+</html>
