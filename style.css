@@ -5,6 +5,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 body {
   font-family: 'Orbitron', sans-serif;
   background: radial-gradient(circle at top, #0a0f1c, #000000);
@@ -358,14 +359,47 @@ a:hover {
 }
 
 
-/* Contact Section futuristic panel */
-#contact {
-    background-color: rgba(0, 0, 0, 0.3); /* transparent background */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* faint border for visibility */
-    border-radius: 12px;
-    padding: 20px;
-    color: #fff;
+/* Contact Icons */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
 }
+
+.contact-icon {
+  font-size: 1.8rem;
+  color: #0ff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+}
+
+/* Hover Effect */
+.contact-icon:hover {
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+  color: #ffffff;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+  .contact-icons {
+    gap: 20px;
+  }
+  .contact-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 1.5rem;
+  }
+}
+
 
 
 /* Footer with neon glow */
@@ -376,4 +410,22 @@ footer {
 }
 footer p {
   text-shadow: 0 3 8px #0ff;
+}
+
+
+section {
+  scroll-margin-top: 7rem;
+}
+
+/* Add vertical breathing space between major sections */
+#education,
+#projects {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+#contact {
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+  padding-bottom: 3rem;
 }
